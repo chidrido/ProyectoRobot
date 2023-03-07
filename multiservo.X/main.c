@@ -24,9 +24,13 @@
 #pragma config EBTR0 = OFF, EBTR1 = OFF, EBTR2 = OFF, EBTR3 = OFF
 #pragma config EBTRB = OFF
 
-#define _XTAL_FREQ 20000000UL
+//#define _XTAL_FREQ 20000000
 #include <xc.h>
+#include <stdio.h>
+
 #include "FuncionesMultiservo.c"
+#include "Libreria_LCD.h"
+#include "uart.h"
 
 ///////////////////////////////  Varibales /////////////////////////////////////
 
@@ -38,6 +42,19 @@
 char contador_servos;
 char servo_bit;
 
+void mensajeInicial(){
+    LCD_Caracter('R');
+    LCD_Caracter('o');
+    LCD_Caracter('b');
+    LCD_Caracter('o');
+    LCD_Caracter('t');
+    LCD_Caracter(' ');
+    LCD_Caracter('Z');
+    LCD_Caracter('o');
+    LCD_Caracter('w');
+    LCD_Caracter('i');
+}
+
 /*////////////////////////////////// Main //////////////////////////////////////
  * Para un cristal de 20Mz, segun el datasheet se necesitan 16 Tocs
  * 1/20MZ = 50 ns.
@@ -45,8 +62,12 @@ char servo_bit;
  * El tiempo minimo de conversion debe ser mayor de 2.45us.
  * 0.8 x TAD = 0.8us x 6 = 2.86us > 2.45us
 */
-void main(){            
-    INTCON2bits.nRBPU = 0;
+void main(){        
+    LCD_Iniciliza();
+    Uart_Init(9600);
+    
+    ADCON1bits.PCFG = 0b1111;
+    INTCON2bits.nRBPU = 0;                          // Habilita el modo nRBPU en el Puerto B.
     TRISB = 0x0F;                                   // Puerto B como salida para motores.
     LATB = 0xF0;
      
@@ -55,19 +76,21 @@ void main(){
     INTCONbits.TMR0IE = 1;                          // Activa interrupcion por desbordamiento del TMR0.  
     T0CONbits.TMR0ON = 1;                           // Activa TMR0.     
     
+    mensajeInicial();
+    
     contador_servos = 0;
     borraPosiciones();
     posicionInicial();
     
+    Uart_Send_String("Robot zowi\r\n");
     ////////////////////////////  Zona de codigo ///////////////////////////////
     while(1) {
+        
         if (PORTBbits.RB0 == 0) {
-            servo2(40, 500);
-            __delay_ms(400);
-            servo2(45, 1000);
-            __delay_ms(400);
-            servo2(50, 1000);
-            __delay_ms(400);
+            andar();
+            
+        }else{
+            borraPosiciones();
         }
     }
 }
@@ -161,3 +184,4 @@ void __interrupt() Interrupcion_TMR0(){
         INTCONbits.TMR0IF = 0;
     } 
 }
+

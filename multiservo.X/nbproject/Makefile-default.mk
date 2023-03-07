@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c FuncionesMultiservo.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c FuncionesMultiservo.c Libreria_LCD.c ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/FuncionesMultiservo.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/FuncionesMultiservo.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/FuncionesMultiservo.p1 ${OBJECTDIR}/Libreria_LCD.p1 ${OBJECTDIR}/_ext/1451882310/uart.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/FuncionesMultiservo.p1.d ${OBJECTDIR}/Libreria_LCD.p1.d ${OBJECTDIR}/_ext/1451882310/uart.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/FuncionesMultiservo.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/FuncionesMultiservo.p1 ${OBJECTDIR}/Libreria_LCD.p1 ${OBJECTDIR}/_ext/1451882310/uart.p1
 
 # Source Files
-SOURCEFILES=main.c FuncionesMultiservo.c
+SOURCEFILES=main.c FuncionesMultiservo.c Libreria_LCD.c ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c
 
 
 
@@ -104,6 +104,22 @@ ${OBJECTDIR}/FuncionesMultiservo.p1: FuncionesMultiservo.c  nbproject/Makefile-$
 	@-${MV} ${OBJECTDIR}/FuncionesMultiservo.d ${OBJECTDIR}/FuncionesMultiservo.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/FuncionesMultiservo.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/Libreria_LCD.p1: Libreria_LCD.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Libreria_LCD.p1.d 
+	@${RM} ${OBJECTDIR}/Libreria_LCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Libreria_LCD.p1 Libreria_LCD.c 
+	@-${MV} ${OBJECTDIR}/Libreria_LCD.d ${OBJECTDIR}/Libreria_LCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Libreria_LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1451882310/uart.p1: ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1451882310" 
+	@${RM} ${OBJECTDIR}/_ext/1451882310/uart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1451882310/uart.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1451882310/uart.p1 ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1451882310/uart.d ${OBJECTDIR}/_ext/1451882310/uart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1451882310/uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -120,6 +136,22 @@ ${OBJECTDIR}/FuncionesMultiservo.p1: FuncionesMultiservo.c  nbproject/Makefile-$
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/FuncionesMultiservo.p1 FuncionesMultiservo.c 
 	@-${MV} ${OBJECTDIR}/FuncionesMultiservo.d ${OBJECTDIR}/FuncionesMultiservo.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/FuncionesMultiservo.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Libreria_LCD.p1: Libreria_LCD.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Libreria_LCD.p1.d 
+	@${RM} ${OBJECTDIR}/Libreria_LCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Libreria_LCD.p1 Libreria_LCD.c 
+	@-${MV} ${OBJECTDIR}/Libreria_LCD.d ${OBJECTDIR}/Libreria_LCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Libreria_LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/1451882310/uart.p1: ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/1451882310" 
+	@${RM} ${OBJECTDIR}/_ext/1451882310/uart.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/1451882310/uart.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/_ext/1451882310/uart.p1 ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c 
+	@-${MV} ${OBJECTDIR}/_ext/1451882310/uart.d ${OBJECTDIR}/_ext/1451882310/uart.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/1451882310/uart.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

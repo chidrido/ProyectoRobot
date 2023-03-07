@@ -5736,6 +5736,153 @@ unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
 # 28 "main.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 29 "main.c" 2
+
+
 # 1 "./FuncionesMultiservo.c" 1
 # 1 "./FuncionesMultiservo.h" 1
 # 10 "./FuncionesMultiservo.h"
@@ -5749,21 +5896,26 @@ static char servo_6;
 static char servo_7;
 static char servo_8;
 
-static pos_servo1 = 0;
-static pos_servo2 = 0;
-static pos_servo3 = 0;
-static pos_servo4 = 0;
+static char pos_servo1 = 0;
+static char pos_servo2 = 0;
+static char pos_servo3 = 0;
+static char pos_servo4 = 0;
 
 static void borraPosiciones();
 static void posicionInicial();
 static void grados();
 static void posicion0();
 
+
+
 static void servo1(char num_1, int vel_1);
 static void servo2(char num_2, int vel_2);
 static void servo3(char num_3, int vel_3);
 static void servo4(char num_4, int vel_4);
+static void servos(char num_1, char num_2, char num_3, char num_4, int vel_);
 static void servo12(char num_11, char num_12, int vel_12);
+
+static void andar();
 # 1 "./FuncionesMultiservo.c" 2
 
 
@@ -5810,6 +5962,26 @@ static void servo4(char num_4, int vel_4){
     bandera_servo[4] = 0;
 }
 
+static void servos(char num_1, char num_2, char num_3, char num_4, int vel_){
+    bandera_servo[1] = 1;
+    bandera_servo[2] = 1;
+    bandera_servo[3] = 1;
+    bandera_servo[4] = 1;
+    servo_1 = num_1;
+    servo_2 = num_2;
+    servo_3 = num_3;
+    servo_4 = num_4;
+
+    while(vel_ > 0){
+        vel_--;
+        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
+    }
+    bandera_servo[1] = 0;
+    bandera_servo[2] = 0;
+    bandera_servo[3] = 0;
+    bandera_servo[4] = 0;
+}
+
 static void servo12(char num_11, char num_12, int vel_12){
     bandera_servo[1] = 1;
     bandera_servo[2] = 1;
@@ -5832,10 +6004,7 @@ static void borraPosiciones(){
 }
 
 static void posicionInicial(){
-    servo1(36, 500);
-    servo2(36, 500);
-    servo3(0, 500);
-    servo4(0, 500);
+    servos(36, 36, 36, 36, 500);
 }
 
 static void grados() {
@@ -5953,12 +6122,105 @@ static void posicion0(){
     servo3(0, 300);
     servo4(0, 300);
 }
-# 29 "main.c" 2
-# 38 "main.c"
+
+
+
+
+static void andar(){
+
+    servos(30, 45, 45, 30, 100);
+    _delay((unsigned long)((200)*(20000000UL/4000.0)));
+
+    servos(37, 45, 45, 37, 100);
+    _delay((unsigned long)((200)*(20000000UL/4000.0)));
+
+    servos(44, 30, 30, 44, 100);
+    _delay((unsigned long)((200)*(20000000UL/4000.0)));
+
+    servos(37, 30, 30, 37, 100);
+    _delay((unsigned long)((200)*(20000000UL/4000.0)));
+
+
+}
+# 31 "main.c" 2
+
+# 1 "./Libreria_LCD.h" 1
+# 13 "./Libreria_LCD.h"
+char lcd_dato;
+char aux_port;
+char LCD_GuardaTRISD;
+char LCD_GuardaDato;
+char LCD_GuardaDatoAux;
+int num, num1, num2, num3, num4;
+
+void LCD_EscribeLCD(char comando);
+
+void LCD_EnviaComando(char comandos);
+
+void LCD_Caracter(char datos);
+
+void LCD_CursorIncr();
+
+void LCD_Linea1();
+
+void LCD_Linea2();
+
+void LCD_Linea3();
+
+void LCD_Linea4();
+
+void LCD_PosicionLinea1();
+
+void LCD_PosicionLinea2();
+
+void LCD_OFF();
+
+void LCD_CursorON();
+
+void LCD_CursorOFF();
+
+void LCD_Borra();
+
+void LCD_2Lineas4Bits5x7();
+
+void LCD_Iniciliza();
+# 32 "main.c" 2
+
+# 1 "./uart.h" 1
+
+
+
+void Uart_Init(unsigned long baud);
+short Uart_Available(void);
+void Uart_Send_Char(char txData);
+void Uart_Send_String(char *info);
+char Uart_Read(void);
+void Uart_Read_String(char* Buf, unsigned int s_buf);
+void Uart_Read_Substring(char* cp, char* vc, int inc, int fn);
+void Uart_Read_StringUntil(char stop_c, char* buf, unsigned int st_size);
+# 33 "main.c" 2
+# 42 "main.c"
 char contador_servos;
 char servo_bit;
-# 48 "main.c"
+
+void mensajeInicial(){
+    LCD_Caracter('R');
+    LCD_Caracter('o');
+    LCD_Caracter('b');
+    LCD_Caracter('o');
+    LCD_Caracter('t');
+    LCD_Caracter(' ');
+    LCD_Caracter('Z');
+    LCD_Caracter('o');
+    LCD_Caracter('w');
+    LCD_Caracter('i');
+}
+# 65 "main.c"
 void main(){
+    LCD_Iniciliza();
+    Uart_Init(9600);
+
+    ADCON1bits.PCFG = 0b1111;
     INTCON2bits.nRBPU = 0;
     TRISB = 0x0F;
     LATB = 0xF0;
@@ -5968,23 +6230,25 @@ void main(){
     INTCONbits.TMR0IE = 1;
     T0CONbits.TMR0ON = 1;
 
+    mensajeInicial();
+
     contador_servos = 0;
     borraPosiciones();
     posicionInicial();
 
+    Uart_Send_String("Robot zowi\r\n");
 
     while(1) {
+
         if (PORTBbits.RB0 == 0) {
-            servo2(40, 500);
-            _delay((unsigned long)((400)*(20000000UL/4000.0)));
-            servo2(45, 1000);
-            _delay((unsigned long)((400)*(20000000UL/4000.0)));
-            servo2(50, 1000);
-            _delay((unsigned long)((400)*(20000000UL/4000.0)));
+            andar();
+
+        }else{
+            borraPosiciones();
         }
     }
 }
-# 85 "main.c"
+# 108 "main.c"
 void Tim_50us(){
     T1CON = 0b11001000;
     TMR1 = 63036;
@@ -6028,7 +6292,7 @@ void Temporizaciones(char contador, char pos_servo){
         }
     }
 }
-# 137 "main.c"
+# 160 "main.c"
 void __attribute__((picinterrupt(("")))) Interrupcion_TMR0(){
     TMR0 = 59286;
 

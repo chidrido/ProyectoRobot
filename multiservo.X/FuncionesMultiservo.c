@@ -43,6 +43,26 @@ static void servo4(char num_4, int vel_4){          // Funcion para mover el ser
     bandera_servo[4] = 0;
 }
 
+static void servos(char num_1, char num_2, char num_3, char num_4, int vel_){
+    bandera_servo[1] = 1;
+    bandera_servo[2] = 1;
+    bandera_servo[3] = 1;
+    bandera_servo[4] = 1;
+    servo_1 = num_1;
+    servo_2 = num_2;
+    servo_3 = num_3;
+    servo_4 = num_4;
+    
+    while(vel_ > 0){
+        vel_--;
+        __delay_us(990);
+    }
+    bandera_servo[1] = 0;
+    bandera_servo[2] = 0;
+    bandera_servo[3] = 0;
+    bandera_servo[4] = 0;
+}
+
 static void servo12(char num_11, char num_12, int vel_12){
     bandera_servo[1] = 1;
     bandera_servo[2] = 1;
@@ -65,10 +85,7 @@ static void borraPosiciones(){
 }
 
 static void posicionInicial(){
-    servo1(36, 500);
-    servo2(36, 500);
-    servo3(0, 500);
-    servo4(0, 500);
+    servos(36, 36, 36, 36, 500);
 }
 
 static void grados() {
@@ -185,4 +202,24 @@ static void posicion0(){
     servo2(0, 300);
     servo3(0, 300);
     servo4(0, 300);
+}
+
+///////////////////////////////// Movimientos //////////////////////////////////
+#define tiempoM  100
+#define tiempoR  200
+static void andar(){
+   
+    servos(30, 45, 45, 30, tiempoM);
+    __delay_ms(tiempoR);
+    
+    servos(37, 45, 45, 37, tiempoM);
+    __delay_ms(tiempoR);
+    
+    servos(44, 30, 30, 44, tiempoM);
+    __delay_ms(tiempoR);
+    
+    servos(37, 30, 30, 37, tiempoM);
+    __delay_ms(tiempoR);
+    
+    
 }

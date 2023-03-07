@@ -1,8 +1,132 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
-[p i __delay ]
+"3859 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3859:     struct {
+[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+"3867
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3867:     struct {
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
+"3858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3858: typedef union {
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
+"3876
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 3876: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
+[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
+"5147
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5147: extern volatile unsigned char TXSTA __attribute__((address(0xFAC)));
+[v _TXSTA `Vuc ~T0 @X0 0 e@4012 ]
+"4937
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4937: extern volatile unsigned char RCSTA __attribute__((address(0xFAB)));
+[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
+"6063
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6063: extern volatile unsigned char BAUDCON __attribute__((address(0xFB8)));
+[v _BAUDCON `Vuc ~T0 @X0 0 e@4024 ]
+"6074
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6074:     struct {
+[s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S247 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
+"6084
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6084:     struct {
+[s S248 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S248 . . SCKP . RCMT ]
+"6090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6090:     struct {
+[s S249 :5 `uc 1 :1 `uc 1 ]
+[n S249 . . RXCKP ]
+"6094
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6094:     struct {
+[s S250 :1 `uc 1 :1 `uc 1 ]
+[n S250 . . W4E ]
+"6073
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6073: typedef union {
+[u S246 `S247 1 `S248 1 `S249 1 `S250 1 ]
+[n S246 . . . . . ]
+"6099
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6099: extern volatile BAUDCONbits_t BAUDCONbits __attribute__((address(0xFB8)));
+[v _BAUDCONbits `VS246 ~T0 @X0 0 e@4024 ]
+"5427
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5427: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"5439
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5439: extern volatile unsigned char SPBRGH __attribute__((address(0xFB0)));
+[v _SPBRGH `Vuc ~T0 @X0 0 e@4016 ]
+"4475
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4475:     struct {
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
+"4485
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4485:     struct {
+[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S179 . . TX1IF RC1IF . PSPIF ]
+"4474
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4474: typedef union {
+[u S177 `S178 1 `S179 1 ]
+[n S177 . . . ]
+"4493
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4493: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
+[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
+"5158
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5158:     struct {
+[s S210 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S210 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"5168
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5168:     struct {
+[s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S211 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"5178
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5178:     struct {
+[s S212 :6 `uc 1 :1 `uc 1 ]
+[n S212 . . TX8_9 ]
+"5182
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5182:     struct {
+[s S213 :1 `uc 1 ]
+[n S213 . TXD8 ]
+"5157
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5157: typedef union {
+[u S209 `S210 1 `S211 1 `S212 1 `S213 1 ]
+[n S209 . . . . . ]
+"5186
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5186: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
+[v _TXSTAbits `VS209 ~T0 @X0 0 e@4012 ]
+"5403
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5403: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"4948
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4948:     struct {
+[s S196 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S196 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4958
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4958:     struct {
+[s S197 :3 `uc 1 :1 `uc 1 ]
+[n S197 . . ADEN ]
+"4962
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4962:     struct {
+[s S198 :5 `uc 1 :1 `uc 1 ]
+[n S198 . . SRENA ]
+"4966
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4966:     struct {
+[s S199 :6 `uc 1 :1 `uc 1 ]
+[n S199 . . RC8_9 ]
+"4970
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4970:     struct {
+[s S200 :6 `uc 1 :1 `uc 1 ]
+[n S200 . . RC9 ]
+"4974
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4974:     struct {
+[s S201 :1 `uc 1 ]
+[n S201 . RCD8 ]
+"4947
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4947: typedef union {
+[u S195 `S196 1 `S197 1 `S198 1 `S199 1 `S200 1 `S201 1 ]
+[n S195 . . . . . . . ]
+"4978
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4978: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS195 ~T0 @X0 0 e@4011 ]
+"5415
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 5415: extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -513,741 +637,327 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"10 ./FuncionesMultiservo.h
-[; ;./FuncionesMultiservo.h: 10: static char bandera_servo[8];
-[v _bandera_servo `uc ~T0 @X0 -> 8 `i s ]
-"11
-[; ;./FuncionesMultiservo.h: 11: static char servo_1;
-[v _servo_1 `uc ~T0 @X0 1 s ]
-"12
-[; ;./FuncionesMultiservo.h: 12: static char servo_2;
-[v _servo_2 `uc ~T0 @X0 1 s ]
-"13
-[; ;./FuncionesMultiservo.h: 13: static char servo_3;
-[v _servo_3 `uc ~T0 @X0 1 s ]
-"14
-[; ;./FuncionesMultiservo.h: 14: static char servo_4;
-[v _servo_4 `uc ~T0 @X0 1 s ]
-"15
-[; ;./FuncionesMultiservo.h: 15: static char servo_5;
-[v _servo_5 `uc ~T0 @X0 1 s ]
-"16
-[; ;./FuncionesMultiservo.h: 16: static char servo_6;
-[v _servo_6 `uc ~T0 @X0 1 s ]
-"17
-[; ;./FuncionesMultiservo.h: 17: static char servo_7;
-[v _servo_7 `uc ~T0 @X0 1 s ]
-"18
-[; ;./FuncionesMultiservo.h: 18: static char servo_8;
-[v _servo_8 `uc ~T0 @X0 1 s ]
-"20
-[; ;./FuncionesMultiservo.h: 20: static char pos_servo1 = 0;
-[v _pos_servo1 `uc ~T0 @X0 1 s ]
-[i _pos_servo1
--> -> 0 `i `uc
-]
-"21
-[; ;./FuncionesMultiservo.h: 21: static char pos_servo2 = 0;
-[v _pos_servo2 `uc ~T0 @X0 1 s ]
-[i _pos_servo2
--> -> 0 `i `uc
-]
-"22
-[; ;./FuncionesMultiservo.h: 22: static char pos_servo3 = 0;
-[v _pos_servo3 `uc ~T0 @X0 1 s ]
-[i _pos_servo3
--> -> 0 `i `uc
-]
-"23
-[; ;./FuncionesMultiservo.h: 23: static char pos_servo4 = 0;
-[v _pos_servo4 `uc ~T0 @X0 1 s ]
-[i _pos_servo4
--> -> 0 `i `uc
-]
-"6 FuncionesMultiservo.c
-[; ;FuncionesMultiservo.c: 6: static void servo1(char num_1, int vel_1){
-[v _servo1 `(v ~T0 @X0 1 sf2`uc`i ]
+"4 ../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 4: void Uart_Init(unsigned long baud)
+[v _Uart_Init `(v ~T0 @X0 1 ef1`ul ]
+"5
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 5: {
 {
-[e :U _servo1 ]
-[v _num_1 `uc ~T0 @X0 1 r1 ]
-[v _vel_1 `i ~T0 @X0 1 r2 ]
+[e :U _Uart_Init ]
+"4
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 4: void Uart_Init(unsigned long baud)
+[v _baud `ul ~T0 @X0 1 r1 ]
+"5
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 5: {
 [f ]
+"6
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 6:     TRISCbits.RC6 = 0;
+[e = . . _TRISCbits 1 4 -> -> 0 `i `uc ]
 "7
-[; ;FuncionesMultiservo.c: 7:     bandera_servo[1] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 7:     TRISCbits.RC7 = 1;
+[e = . . _TRISCbits 1 5 -> -> 1 `i `uc ]
 "8
-[; ;FuncionesMultiservo.c: 8:     servo_1 = num_1;
-[e = _servo_1 _num_1 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 8:     TXSTA = 0x24;
+[e = _TXSTA -> -> 36 `i `uc ]
 "9
-[; ;FuncionesMultiservo.c: 9:     while(vel_1 > 0){
-[e $U 368  ]
-[e :U 369 ]
-{
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 9:     RCSTA = 0x90;
+[e = _RCSTA -> -> 144 `i `uc ]
 "10
-[; ;FuncionesMultiservo.c: 10:         vel_1--;
-[e -- _vel_1 -> 1 `i ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 10:     BAUDCON = 0x00;
+[e = _BAUDCON -> -> 0 `i `uc ]
 "11
-[; ;FuncionesMultiservo.c: 11:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 11:     BAUDCONbits.BRG16 = 1;
+[e = . . _BAUDCONbits 0 3 -> -> 1 `i `uc ]
 "12
-[; ;FuncionesMultiservo.c: 12:     }
-}
-[e :U 368 ]
-"9
-[; ;FuncionesMultiservo.c: 9:     while(vel_1 > 0){
-[e $ > _vel_1 -> 0 `i 369  ]
-[e :U 370 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 12:     unsigned int vx = (20000000/(baud*4))-1;
+[v _vx `ui ~T0 @X0 1 a ]
+[e = _vx -> - / -> -> 20000000 `l `ul * _baud -> -> -> 4 `i `l `ul -> -> -> 1 `i `l `ul `ui ]
 "13
-[; ;FuncionesMultiservo.c: 13:     bandera_servo[1] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 13:     SPBRG = vx & 0x00FF;
+[e = _SPBRG -> & _vx -> -> 255 `i `ui `uc ]
 "14
-[; ;FuncionesMultiservo.c: 14: }
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 14:     SPBRGH = vx >> 8;
+[e = _SPBRGH -> >> _vx -> 8 `i `uc ]
+"15
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 15: }
 [e :UE 367 ]
 }
-"16
-[; ;FuncionesMultiservo.c: 16: static void servo2(char num_2, int vel_2){
-[v _servo2 `(v ~T0 @X0 1 sf2`uc`i ]
-{
-[e :U _servo2 ]
-[v _num_2 `uc ~T0 @X0 1 r1 ]
-[v _vel_2 `i ~T0 @X0 1 r2 ]
-[f ]
 "17
-[; ;FuncionesMultiservo.c: 17:     bandera_servo[2] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 17: short Uart_Available(void)
+[v _Uart_Available `(s ~T0 @X0 1 ef ]
 "18
-[; ;FuncionesMultiservo.c: 18:     servo_2 = num_2;
-[e = _servo_2 _num_2 ]
-"19
-[; ;FuncionesMultiservo.c: 19:     while(vel_2 > 0){
-[e $U 372  ]
-[e :U 373 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 18: {
 {
-"20
-[; ;FuncionesMultiservo.c: 20:         vel_2--;
-[e -- _vel_2 -> 1 `i ]
-"21
-[; ;FuncionesMultiservo.c: 21:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"22
-[; ;FuncionesMultiservo.c: 22:     }
-}
-[e :U 372 ]
-"19
-[; ;FuncionesMultiservo.c: 19:     while(vel_2 > 0){
-[e $ > _vel_2 -> 0 `i 373  ]
-[e :U 374 ]
-"23
-[; ;FuncionesMultiservo.c: 23:     bandera_servo[2] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"24
-[; ;FuncionesMultiservo.c: 24: }
-[e :UE 371 ]
-}
-"26
-[; ;FuncionesMultiservo.c: 26: static void servo3(char num_3, int vel_3){
-[v _servo3 `(v ~T0 @X0 1 sf2`uc`i ]
-{
-[e :U _servo3 ]
-[v _num_3 `uc ~T0 @X0 1 r1 ]
-[v _vel_3 `i ~T0 @X0 1 r2 ]
+[e :U _Uart_Available ]
 [f ]
-"27
-[; ;FuncionesMultiservo.c: 27:     bandera_servo[3] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 3 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"28
-[; ;FuncionesMultiservo.c: 28:     servo_3 = num_3;
-[e = _servo_3 _num_3 ]
-"29
-[; ;FuncionesMultiservo.c: 29:     while(vel_3 > 0){
-[e $U 376  ]
-[e :U 377 ]
-{
-"30
-[; ;FuncionesMultiservo.c: 30:         vel_3--;
-[e -- _vel_3 -> 1 `i ]
-"31
-[; ;FuncionesMultiservo.c: 31:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"32
-[; ;FuncionesMultiservo.c: 32:     }
+"19
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 19:     return PIR1bits.RCIF ? 1 : 0;
+[e ) -> ? != -> . . _PIR1bits 0 5 `i -> 0 `i : -> 1 `i -> 0 `i `s ]
+[e $UE 368  ]
+"20
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 20: }
+[e :UE 368 ]
 }
-[e :U 376 ]
+"22
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 22: void Uart_Send_Char(char txData)
+[v _Uart_Send_Char `(v ~T0 @X0 1 ef1`uc ]
+"23
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 23: {
+{
+[e :U _Uart_Send_Char ]
+"22
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 22: void Uart_Send_Char(char txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
+"23
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 23: {
+[f ]
+"24
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 24:     while(TXSTAbits.TRMT == 0);
+[e $U 370  ]
+[e :U 371 ]
+[e :U 370 ]
+[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 371  ]
+[e :U 372 ]
+"25
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 25:     TXREG = txData;
+[e = _TXREG -> _txData `uc ]
+"26
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 26: }
+[e :UE 369 ]
+}
+"28
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 28: void Uart_Send_String(char *info)
+[v _Uart_Send_String `(v ~T0 @X0 1 ef1`*uc ]
 "29
-[; ;FuncionesMultiservo.c: 29:     while(vel_3 > 0){
-[e $ > _vel_3 -> 0 `i 377  ]
-[e :U 378 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 29: {
+{
+[e :U _Uart_Send_String ]
+"28
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 28: void Uart_Send_String(char *info)
+[v _info `*uc ~T0 @X0 1 r1 ]
+"29
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 29: {
+[f ]
+"30
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 30:     while(*info)
+[e $U 374  ]
+[e :U 375 ]
+"31
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 31:     {
+{
+"32
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 32:         Uart_Send_Char(*info++);
+[e ( _Uart_Send_Char (1 *U ++ _info * -> -> 1 `i `x -> -> # *U _info `i `x ]
 "33
-[; ;FuncionesMultiservo.c: 33:     bandera_servo[3] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 3 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 33:     }
+}
+[e :U 374 ]
+"30
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 30:     while(*info)
+[e $ != -> *U _info `i -> 0 `i 375  ]
+[e :U 376 ]
 "34
-[; ;FuncionesMultiservo.c: 34: }
-[e :UE 375 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 34: }
+[e :UE 373 ]
 }
 "36
-[; ;FuncionesMultiservo.c: 36: static void servo4(char num_4, int vel_4){
-[v _servo4 `(v ~T0 @X0 1 sf2`uc`i ]
-{
-[e :U _servo4 ]
-[v _num_4 `uc ~T0 @X0 1 r1 ]
-[v _vel_4 `i ~T0 @X0 1 r2 ]
-[f ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 36: char Uart_Read(void)
+[v _Uart_Read `(uc ~T0 @X0 1 ef ]
 "37
-[; ;FuncionesMultiservo.c: 37:     bandera_servo[4] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 4 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"38
-[; ;FuncionesMultiservo.c: 38:     servo_4 = num_4;
-[e = _servo_4 _num_4 ]
-"39
-[; ;FuncionesMultiservo.c: 39:     while(vel_4 > 0){
-[e $U 380  ]
-[e :U 381 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 37: {
 {
-"40
-[; ;FuncionesMultiservo.c: 40:         vel_4--;
-[e -- _vel_4 -> 1 `i ]
-"41
-[; ;FuncionesMultiservo.c: 41:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"42
-[; ;FuncionesMultiservo.c: 42:     }
-}
+[e :U _Uart_Read ]
+[f ]
+"38
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 38:     while(PIR1bits.RCIF == 0);
+[e $U 378  ]
+[e :U 379 ]
+[e :U 378 ]
+[e $ == -> . . _PIR1bits 0 5 `i -> 0 `i 379  ]
 [e :U 380 ]
 "39
-[; ;FuncionesMultiservo.c: 39:     while(vel_4 > 0){
-[e $ > _vel_4 -> 0 `i 381  ]
-[e :U 382 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 39:     if(RCSTAbits.OERR == 1)
+[e $ ! == -> . . _RCSTAbits 0 1 `i -> 1 `i 381  ]
+"40
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 40:     {
+{
+"41
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 41:         RCSTAbits.CREN = 0;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+"42
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 42:         RCSTAbits.CREN = 1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "43
-[; ;FuncionesMultiservo.c: 43:     bandera_servo[4] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 4 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 43:     }
+}
+[e :U 381 ]
 "44
-[; ;FuncionesMultiservo.c: 44: }
-[e :UE 379 ]
-}
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 44:     PIR1bits.RCIF = 0;
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"45
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 45:     return RCREG;
+[e ) -> _RCREG `uc ]
+[e $UE 377  ]
 "46
-[; ;FuncionesMultiservo.c: 46: static void servos(char num_1, char num_2, char num_3, char num_4, int vel_){
-[v _servos `(v ~T0 @X0 1 sf5`uc`uc`uc`uc`i ]
-{
-[e :U _servos ]
-[v _num_1 `uc ~T0 @X0 1 r1 ]
-[v _num_2 `uc ~T0 @X0 1 r2 ]
-[v _num_3 `uc ~T0 @X0 1 r3 ]
-[v _num_4 `uc ~T0 @X0 1 r4 ]
-[v _vel_ `i ~T0 @X0 1 r5 ]
-[f ]
-"47
-[; ;FuncionesMultiservo.c: 47:     bandera_servo[1] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 46: }
+[e :UE 377 ]
+}
 "48
-[; ;FuncionesMultiservo.c: 48:     bandera_servo[2] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 48: void Uart_Read_String(char* Buf, unsigned int s_buf)
+[v _Uart_Read_String `(v ~T0 @X0 1 ef2`*uc`ui ]
 "49
-[; ;FuncionesMultiservo.c: 49:     bandera_servo[3] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 3 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"50
-[; ;FuncionesMultiservo.c: 50:     bandera_servo[4] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 4 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"51
-[; ;FuncionesMultiservo.c: 51:     servo_1 = num_1;
-[e = _servo_1 _num_1 ]
-"52
-[; ;FuncionesMultiservo.c: 52:     servo_2 = num_2;
-[e = _servo_2 _num_2 ]
-"53
-[; ;FuncionesMultiservo.c: 53:     servo_3 = num_3;
-[e = _servo_3 _num_3 ]
-"54
-[; ;FuncionesMultiservo.c: 54:     servo_4 = num_4;
-[e = _servo_4 _num_4 ]
-"56
-[; ;FuncionesMultiservo.c: 56:     while(vel_ > 0){
-[e $U 384  ]
-[e :U 385 ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 49: {
 {
-"57
-[; ;FuncionesMultiservo.c: 57:         vel_--;
-[e -- _vel_ -> 1 `i ]
-"58
-[; ;FuncionesMultiservo.c: 58:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"59
-[; ;FuncionesMultiservo.c: 59:     }
-}
-[e :U 384 ]
-"56
-[; ;FuncionesMultiservo.c: 56:     while(vel_ > 0){
-[e $ > _vel_ -> 0 `i 385  ]
-[e :U 386 ]
-"60
-[; ;FuncionesMultiservo.c: 60:     bandera_servo[1] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"61
-[; ;FuncionesMultiservo.c: 61:     bandera_servo[2] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"62
-[; ;FuncionesMultiservo.c: 62:     bandera_servo[3] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 3 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"63
-[; ;FuncionesMultiservo.c: 63:     bandera_servo[4] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 4 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"64
-[; ;FuncionesMultiservo.c: 64: }
-[e :UE 383 ]
-}
-"66
-[; ;FuncionesMultiservo.c: 66: static void servo12(char num_11, char num_12, int vel_12){
-[v _servo12 `(v ~T0 @X0 1 sf3`uc`uc`i ]
-{
-[e :U _servo12 ]
-[v _num_11 `uc ~T0 @X0 1 r1 ]
-[v _num_12 `uc ~T0 @X0 1 r2 ]
-[v _vel_12 `i ~T0 @X0 1 r3 ]
+[e :U _Uart_Read_String ]
+"48
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 48: void Uart_Read_String(char* Buf, unsigned int s_buf)
+[v _Buf `*uc ~T0 @X0 1 r1 ]
+[v _s_buf `ui ~T0 @X0 1 r2 ]
+"49
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 49: {
 [f ]
-"67
-[; ;FuncionesMultiservo.c: 67:     bandera_servo[1] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"68
-[; ;FuncionesMultiservo.c: 68:     bandera_servo[2] = 1;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 1 `i `uc ]
-"69
-[; ;FuncionesMultiservo.c: 69:     servo_1 = num_11;
-[e = _servo_1 _num_11 ]
-"70
-[; ;FuncionesMultiservo.c: 70:     servo_2 = num_12;
-[e = _servo_2 _num_12 ]
-"71
-[; ;FuncionesMultiservo.c: 71:     while(vel_12 > 0){
-[e $U 388  ]
-[e :U 389 ]
+"50
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 50:     unsigned int cont_buf = 0;
+[v _cont_buf `ui ~T0 @X0 1 a ]
+[e = _cont_buf -> -> 0 `i `ui ]
+"51
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 51:     char c;
+[v _c `uc ~T0 @X0 1 a ]
+"52
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 52:     do
+[e :U 385 ]
+"53
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 53:     {
 {
-"72
-[; ;FuncionesMultiservo.c: 72:         vel_12--;
-[e -- _vel_12 -> 1 `i ]
-"73
-[; ;FuncionesMultiservo.c: 73:         _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 990 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"74
-[; ;FuncionesMultiservo.c: 74:     }
+"54
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 54:         c = Uart_Read();
+[e = _c ( _Uart_Read ..  ]
+"55
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 55:         Buf[cont_buf++] = c;
+[e = *U + _Buf * -> ++ _cont_buf -> -> 1 `i `ui `ux -> -> # *U _Buf `ui `ux _c ]
+"56
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 56:         if(cont_buf >= s_buf) break;
+[e $ ! >= _cont_buf _s_buf 386  ]
+[e $U 384  ]
+[e :U 386 ]
+"57
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 57:     }while(c != '\n');
 }
+[e $ != -> _c `ui -> 10 `ui 385  ]
+[e :U 384 ]
+"58
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 58:     Buf[cont_buf-2] = '\0';
+[e = *U + _Buf * -> - _cont_buf -> -> 2 `i `ui `ux -> -> # *U _Buf `ui `ux -> -> 0 `ui `uc ]
+"59
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 59:     cont_buf = 0;
+[e = _cont_buf -> -> 0 `i `ui ]
+"60
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 60: }
+[e :UE 382 ]
+}
+"62
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 62: void Uart_Read_Substring(char* cp, char* vc, int inc, int fn)
+[v _Uart_Read_Substring `(v ~T0 @X0 1 ef4`*uc`*uc`i`i ]
+"63
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 63: {
+{
+[e :U _Uart_Read_Substring ]
+"62
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 62: void Uart_Read_Substring(char* cp, char* vc, int inc, int fn)
+[v _cp `*uc ~T0 @X0 1 r1 ]
+[v _vc `*uc ~T0 @X0 1 r2 ]
+[v _inc `i ~T0 @X0 1 r3 ]
+[v _fn `i ~T0 @X0 1 r4 ]
+"63
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 63: {
+[f ]
+"64
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 64:     int pt = 0;
+[v _pt `i ~T0 @X0 1 a ]
+[e = _pt -> 0 `i ]
+"65
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 65:     for(int lt=inc; lt<=fn; lt++)
+{
+[v _lt `i ~T0 @X0 1 a ]
+[e = _lt _inc ]
+[e $U 391  ]
 [e :U 388 ]
+"66
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 66:     {
+{
+"67
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 67:         vc[pt] = cp[lt];
+[e = *U + _vc * -> _pt `x -> -> # *U _vc `i `x *U + _cp * -> _lt `x -> -> # *U _cp `i `x ]
+"68
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 68:         pt++;
+[e ++ _pt -> 1 `i ]
+"69
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 69:     }
+}
+[e ++ _lt -> 1 `i ]
+[e :U 391 ]
+[e $ <= _lt _fn 388  ]
+[e :U 389 ]
+}
+"70
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 70:     vc[pt] = '\0';
+[e = *U + _vc * -> _pt `x -> -> # *U _vc `i `x -> -> 0 `ui `uc ]
 "71
-[; ;FuncionesMultiservo.c: 71:     while(vel_12 > 0){
-[e $ > _vel_12 -> 0 `i 389  ]
-[e :U 390 ]
-"75
-[; ;FuncionesMultiservo.c: 75:     bandera_servo[1] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 1 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"76
-[; ;FuncionesMultiservo.c: 76:     bandera_servo[2] = 0;
-[e = *U + &U _bandera_servo * -> -> -> 2 `i `ui `ux -> -> # *U &U _bandera_servo `ui `ux -> -> 0 `i `uc ]
-"77
-[; ;FuncionesMultiservo.c: 77: }
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 71:     pt = 0;
+[e = _pt -> 0 `i ]
+"72
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 72: }
 [e :UE 387 ]
 }
+"74
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 74: void Uart_Read_StringUntil(char stop_c, char* buf, unsigned int st_size)
+[v _Uart_Read_StringUntil `(v ~T0 @X0 1 ef3`uc`*uc`ui ]
+"75
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 75: {
+{
+[e :U _Uart_Read_StringUntil ]
+"74
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 74: void Uart_Read_StringUntil(char stop_c, char* buf, unsigned int st_size)
+[v _stop_c `uc ~T0 @X0 1 r1 ]
+[v _buf `*uc ~T0 @X0 1 r2 ]
+[v _st_size `ui ~T0 @X0 1 r3 ]
+"75
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 75: {
+[f ]
+"76
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 76:     unsigned int rx_cont = 0;
+[v _rx_cont `ui ~T0 @X0 1 a ]
+[e = _rx_cont -> -> 0 `i `ui ]
+"77
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 77:     while(*(buf-1) != stop_c)
+[e $U 393  ]
+[e :U 394 ]
+"78
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 78:     {
+{
+"79
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 79:         rx_cont++;
+[e ++ _rx_cont -> -> 1 `i `ui ]
 "80
-[; ;FuncionesMultiservo.c: 80: static void borraPosiciones(){
-[v _borraPosiciones `(v ~T0 @X0 1 sf ]
-{
-[e :U _borraPosiciones ]
-[f ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 80:         *buf++ = Uart_Read();
+[e = *U ++ _buf * -> -> 1 `i `x -> -> # *U _buf `i `x ( _Uart_Read ..  ]
 "81
-[; ;FuncionesMultiservo.c: 81:     pos_servo1 = 0;
-[e = _pos_servo1 -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 81:         if(rx_cont >= st_size) break;
+[e $ ! >= _rx_cont _st_size 396  ]
+[e $U 395  ]
+[e :U 396 ]
 "82
-[; ;FuncionesMultiservo.c: 82:     pos_servo2 = 0;
-[e = _pos_servo2 -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 82:     }
+}
+[e :U 393 ]
+"77
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 77:     while(*(buf-1) != stop_c)
+[e $ != -> *U - _buf * -> -> 1 `i `x -> -> # *U _buf `i `x `i -> _stop_c `i 394  ]
+[e :U 395 ]
 "83
-[; ;FuncionesMultiservo.c: 83:     pos_servo3 = 0;
-[e = _pos_servo3 -> -> 0 `i `uc ]
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 83:     *--buf = 0;
+[e = *U =- _buf * -> -> 1 `i `x -> -> # *U _buf `i `x -> -> 0 `i `uc ]
 "84
-[; ;FuncionesMultiservo.c: 84:     pos_servo4 = 0;
-[e = _pos_servo4 -> -> 0 `i `uc ]
-"85
-[; ;FuncionesMultiservo.c: 85: }
-[e :UE 391 ]
-}
-"87
-[; ;FuncionesMultiservo.c: 87: static void posicionInicial(){
-[v _posicionInicial `(v ~T0 @X0 1 sf ]
-{
-[e :U _posicionInicial ]
-[f ]
-"88
-[; ;FuncionesMultiservo.c: 88:     servos(36, 36, 36, 36, 500);
-[e ( _servos (4 , , , , -> -> 36 `i `uc -> -> 36 `i `uc -> -> 36 `i `uc -> -> 36 `i `uc -> 500 `i ]
-"89
-[; ;FuncionesMultiservo.c: 89: }
+[; ;../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c: 84: }
 [e :UE 392 ]
-}
-"91
-[; ;FuncionesMultiservo.c: 91: static void grados() {
-[v _grados `(v ~T0 @X0 1 sf ]
-{
-[e :U _grados ]
-[f ]
-"92
-[; ;FuncionesMultiservo.c: 92:     servo1(0, 200);
-[e ( _servo1 (2 , -> -> 0 `i `uc -> 200 `i ]
-"93
-[; ;FuncionesMultiservo.c: 93:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"94
-[; ;FuncionesMultiservo.c: 94:     servo1(1, 200);
-[e ( _servo1 (2 , -> -> 1 `i `uc -> 200 `i ]
-"95
-[; ;FuncionesMultiservo.c: 95:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"96
-[; ;FuncionesMultiservo.c: 96:     servo1(2, 200);
-[e ( _servo1 (2 , -> -> 2 `i `uc -> 200 `i ]
-"97
-[; ;FuncionesMultiservo.c: 97:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"98
-[; ;FuncionesMultiservo.c: 98:     servo1(3, 200);
-[e ( _servo1 (2 , -> -> 3 `i `uc -> 200 `i ]
-"99
-[; ;FuncionesMultiservo.c: 99:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"100
-[; ;FuncionesMultiservo.c: 100:     servo1(4, 200);
-[e ( _servo1 (2 , -> -> 4 `i `uc -> 200 `i ]
-"101
-[; ;FuncionesMultiservo.c: 101:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"102
-[; ;FuncionesMultiservo.c: 102:     servo1(5, 200);
-[e ( _servo1 (2 , -> -> 5 `i `uc -> 200 `i ]
-"103
-[; ;FuncionesMultiservo.c: 103:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"104
-[; ;FuncionesMultiservo.c: 104:     servo1(6, 200);
-[e ( _servo1 (2 , -> -> 6 `i `uc -> 200 `i ]
-"105
-[; ;FuncionesMultiservo.c: 105:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"106
-[; ;FuncionesMultiservo.c: 106:     servo1(7, 200);
-[e ( _servo1 (2 , -> -> 7 `i `uc -> 200 `i ]
-"107
-[; ;FuncionesMultiservo.c: 107:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"108
-[; ;FuncionesMultiservo.c: 108:     servo1(8, 200);
-[e ( _servo1 (2 , -> -> 8 `i `uc -> 200 `i ]
-"109
-[; ;FuncionesMultiservo.c: 109:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"110
-[; ;FuncionesMultiservo.c: 110:     servo1(9, 200);
-[e ( _servo1 (2 , -> -> 9 `i `uc -> 200 `i ]
-"111
-[; ;FuncionesMultiservo.c: 111:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"112
-[; ;FuncionesMultiservo.c: 112:     servo1(10, 200);
-[e ( _servo1 (2 , -> -> 10 `i `uc -> 200 `i ]
-"113
-[; ;FuncionesMultiservo.c: 113:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"115
-[; ;FuncionesMultiservo.c: 115:     servo1(11, 200);
-[e ( _servo1 (2 , -> -> 11 `i `uc -> 200 `i ]
-"116
-[; ;FuncionesMultiservo.c: 116:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"117
-[; ;FuncionesMultiservo.c: 117:     servo1(12, 200);
-[e ( _servo1 (2 , -> -> 12 `i `uc -> 200 `i ]
-"118
-[; ;FuncionesMultiservo.c: 118:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"119
-[; ;FuncionesMultiservo.c: 119:     servo1(13, 200);
-[e ( _servo1 (2 , -> -> 13 `i `uc -> 200 `i ]
-"120
-[; ;FuncionesMultiservo.c: 120:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"121
-[; ;FuncionesMultiservo.c: 121:     servo1(14, 200);
-[e ( _servo1 (2 , -> -> 14 `i `uc -> 200 `i ]
-"122
-[; ;FuncionesMultiservo.c: 122:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"123
-[; ;FuncionesMultiservo.c: 123:     servo1(15, 200);
-[e ( _servo1 (2 , -> -> 15 `i `uc -> 200 `i ]
-"124
-[; ;FuncionesMultiservo.c: 124:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"125
-[; ;FuncionesMultiservo.c: 125:     servo1(16, 200);
-[e ( _servo1 (2 , -> -> 16 `i `uc -> 200 `i ]
-"126
-[; ;FuncionesMultiservo.c: 126:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"127
-[; ;FuncionesMultiservo.c: 127:     servo1(17, 200);
-[e ( _servo1 (2 , -> -> 17 `i `uc -> 200 `i ]
-"128
-[; ;FuncionesMultiservo.c: 128:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"129
-[; ;FuncionesMultiservo.c: 129:     servo1(18, 200);
-[e ( _servo1 (2 , -> -> 18 `i `uc -> 200 `i ]
-"130
-[; ;FuncionesMultiservo.c: 130:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"131
-[; ;FuncionesMultiservo.c: 131:     servo1(19, 200);
-[e ( _servo1 (2 , -> -> 19 `i `uc -> 200 `i ]
-"132
-[; ;FuncionesMultiservo.c: 132:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"133
-[; ;FuncionesMultiservo.c: 133:     servo1(20, 200);
-[e ( _servo1 (2 , -> -> 20 `i `uc -> 200 `i ]
-"134
-[; ;FuncionesMultiservo.c: 134:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"136
-[; ;FuncionesMultiservo.c: 136:     servo1(21, 200);
-[e ( _servo1 (2 , -> -> 21 `i `uc -> 200 `i ]
-"137
-[; ;FuncionesMultiservo.c: 137:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"138
-[; ;FuncionesMultiservo.c: 138:     servo1(22, 200);
-[e ( _servo1 (2 , -> -> 22 `i `uc -> 200 `i ]
-"139
-[; ;FuncionesMultiservo.c: 139:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"140
-[; ;FuncionesMultiservo.c: 140:     servo1(23, 200);
-[e ( _servo1 (2 , -> -> 23 `i `uc -> 200 `i ]
-"141
-[; ;FuncionesMultiservo.c: 141:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"142
-[; ;FuncionesMultiservo.c: 142:     servo1(24, 200);
-[e ( _servo1 (2 , -> -> 24 `i `uc -> 200 `i ]
-"143
-[; ;FuncionesMultiservo.c: 143:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"144
-[; ;FuncionesMultiservo.c: 144:     servo1(25, 200);
-[e ( _servo1 (2 , -> -> 25 `i `uc -> 200 `i ]
-"145
-[; ;FuncionesMultiservo.c: 145:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"146
-[; ;FuncionesMultiservo.c: 146:     servo1(26, 200);
-[e ( _servo1 (2 , -> -> 26 `i `uc -> 200 `i ]
-"147
-[; ;FuncionesMultiservo.c: 147:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"148
-[; ;FuncionesMultiservo.c: 148:     servo1(27, 200);
-[e ( _servo1 (2 , -> -> 27 `i `uc -> 200 `i ]
-"149
-[; ;FuncionesMultiservo.c: 149:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"150
-[; ;FuncionesMultiservo.c: 150:     servo1(28, 200);
-[e ( _servo1 (2 , -> -> 28 `i `uc -> 200 `i ]
-"151
-[; ;FuncionesMultiservo.c: 151:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"152
-[; ;FuncionesMultiservo.c: 152:     servo1(29, 200);
-[e ( _servo1 (2 , -> -> 29 `i `uc -> 200 `i ]
-"153
-[; ;FuncionesMultiservo.c: 153:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"154
-[; ;FuncionesMultiservo.c: 154:     servo1(30, 200);
-[e ( _servo1 (2 , -> -> 30 `i `uc -> 200 `i ]
-"155
-[; ;FuncionesMultiservo.c: 155:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"157
-[; ;FuncionesMultiservo.c: 157:     servo1(31, 200);
-[e ( _servo1 (2 , -> -> 31 `i `uc -> 200 `i ]
-"158
-[; ;FuncionesMultiservo.c: 158:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"159
-[; ;FuncionesMultiservo.c: 159:     servo1(32, 200);
-[e ( _servo1 (2 , -> -> 32 `i `uc -> 200 `i ]
-"160
-[; ;FuncionesMultiservo.c: 160:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"161
-[; ;FuncionesMultiservo.c: 161:     servo1(33, 200);
-[e ( _servo1 (2 , -> -> 33 `i `uc -> 200 `i ]
-"162
-[; ;FuncionesMultiservo.c: 162:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"163
-[; ;FuncionesMultiservo.c: 163:     servo1(34, 200);
-[e ( _servo1 (2 , -> -> 34 `i `uc -> 200 `i ]
-"164
-[; ;FuncionesMultiservo.c: 164:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"165
-[; ;FuncionesMultiservo.c: 165:     servo1(35, 200);
-[e ( _servo1 (2 , -> -> 35 `i `uc -> 200 `i ]
-"166
-[; ;FuncionesMultiservo.c: 166:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"167
-[; ;FuncionesMultiservo.c: 167:     servo1(36, 200);
-[e ( _servo1 (2 , -> -> 36 `i `uc -> 200 `i ]
-"168
-[; ;FuncionesMultiservo.c: 168:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"169
-[; ;FuncionesMultiservo.c: 169:     servo1(37, 200);
-[e ( _servo1 (2 , -> -> 37 `i `uc -> 200 `i ]
-"170
-[; ;FuncionesMultiservo.c: 170:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"171
-[; ;FuncionesMultiservo.c: 171:     servo1(38, 200);
-[e ( _servo1 (2 , -> -> 38 `i `uc -> 200 `i ]
-"172
-[; ;FuncionesMultiservo.c: 172:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"173
-[; ;FuncionesMultiservo.c: 173:     servo1(39, 200);
-[e ( _servo1 (2 , -> -> 39 `i `uc -> 200 `i ]
-"174
-[; ;FuncionesMultiservo.c: 174:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"175
-[; ;FuncionesMultiservo.c: 175:     servo1(40, 200);
-[e ( _servo1 (2 , -> -> 40 `i `uc -> 200 `i ]
-"176
-[; ;FuncionesMultiservo.c: 176:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"178
-[; ;FuncionesMultiservo.c: 178:     servo1(41, 200);
-[e ( _servo1 (2 , -> -> 41 `i `uc -> 200 `i ]
-"179
-[; ;FuncionesMultiservo.c: 179:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"180
-[; ;FuncionesMultiservo.c: 180:     servo1(42, 200);
-[e ( _servo1 (2 , -> -> 42 `i `uc -> 200 `i ]
-"181
-[; ;FuncionesMultiservo.c: 181:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"182
-[; ;FuncionesMultiservo.c: 182:     servo1(43, 200);
-[e ( _servo1 (2 , -> -> 43 `i `uc -> 200 `i ]
-"183
-[; ;FuncionesMultiservo.c: 183:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"184
-[; ;FuncionesMultiservo.c: 184:     servo1(44, 200);
-[e ( _servo1 (2 , -> -> 44 `i `uc -> 200 `i ]
-"185
-[; ;FuncionesMultiservo.c: 185:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"186
-[; ;FuncionesMultiservo.c: 186:     servo1(45, 200);
-[e ( _servo1 (2 , -> -> 45 `i `uc -> 200 `i ]
-"187
-[; ;FuncionesMultiservo.c: 187:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"188
-[; ;FuncionesMultiservo.c: 188:     servo1(46, 200);
-[e ( _servo1 (2 , -> -> 46 `i `uc -> 200 `i ]
-"189
-[; ;FuncionesMultiservo.c: 189:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"190
-[; ;FuncionesMultiservo.c: 190:     servo1(47, 200);
-[e ( _servo1 (2 , -> -> 47 `i `uc -> 200 `i ]
-"191
-[; ;FuncionesMultiservo.c: 191:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"192
-[; ;FuncionesMultiservo.c: 192:     servo1(48, 200);
-[e ( _servo1 (2 , -> -> 48 `i `uc -> 200 `i ]
-"193
-[; ;FuncionesMultiservo.c: 193:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"194
-[; ;FuncionesMultiservo.c: 194:     servo1(49, 200);
-[e ( _servo1 (2 , -> -> 49 `i `uc -> 200 `i ]
-"195
-[; ;FuncionesMultiservo.c: 195:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"196
-[; ;FuncionesMultiservo.c: 196:     servo1(50, 200);
-[e ( _servo1 (2 , -> -> 50 `i `uc -> 200 `i ]
-"197
-[; ;FuncionesMultiservo.c: 197:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"198
-[; ;FuncionesMultiservo.c: 198: }
-[e :UE 393 ]
-}
-"200
-[; ;FuncionesMultiservo.c: 200: static void posicion0(){
-[v _posicion0 `(v ~T0 @X0 1 sf ]
-{
-[e :U _posicion0 ]
-[f ]
-"201
-[; ;FuncionesMultiservo.c: 201:     servo1(0, 300);
-[e ( _servo1 (2 , -> -> 0 `i `uc -> 300 `i ]
-"202
-[; ;FuncionesMultiservo.c: 202:     servo2(0, 300);
-[e ( _servo2 (2 , -> -> 0 `i `uc -> 300 `i ]
-"203
-[; ;FuncionesMultiservo.c: 203:     servo3(0, 300);
-[e ( _servo3 (2 , -> -> 0 `i `uc -> 300 `i ]
-"204
-[; ;FuncionesMultiservo.c: 204:     servo4(0, 300);
-[e ( _servo4 (2 , -> -> 0 `i `uc -> 300 `i ]
-"205
-[; ;FuncionesMultiservo.c: 205: }
-[e :UE 394 ]
-}
-"210
-[; ;FuncionesMultiservo.c: 210: static void andar(){
-[v _andar `(v ~T0 @X0 1 sf ]
-{
-[e :U _andar ]
-[f ]
-"212
-[; ;FuncionesMultiservo.c: 212:     servos(30, 45, 45, 30, 100);
-[e ( _servos (4 , , , , -> -> 30 `i `uc -> -> 45 `i `uc -> -> 45 `i `uc -> -> 30 `i `uc -> 100 `i ]
-"213
-[; ;FuncionesMultiservo.c: 213:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"215
-[; ;FuncionesMultiservo.c: 215:     servos(37, 45, 45, 37, 100);
-[e ( _servos (4 , , , , -> -> 37 `i `uc -> -> 45 `i `uc -> -> 45 `i `uc -> -> 37 `i `uc -> 100 `i ]
-"216
-[; ;FuncionesMultiservo.c: 216:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"218
-[; ;FuncionesMultiservo.c: 218:     servos(44, 30, 30, 44, 100);
-[e ( _servos (4 , , , , -> -> 44 `i `uc -> -> 30 `i `uc -> -> 30 `i `uc -> -> 44 `i `uc -> 100 `i ]
-"219
-[; ;FuncionesMultiservo.c: 219:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"221
-[; ;FuncionesMultiservo.c: 221:     servos(37, 30, 30, 37, 100);
-[e ( _servos (4 , , , , -> -> 37 `i `uc -> -> 30 `i `uc -> -> 30 `i `uc -> -> 37 `i `uc -> 100 `i ]
-"222
-[; ;FuncionesMultiservo.c: 222:     _delay((unsigned long)((200)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"225
-[; ;FuncionesMultiservo.c: 225: }
-[e :UE 395 ]
 }

@@ -1,4 +1,4 @@
-# 1 "FuncionesMultiservo.c"
+# 1 "../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,11 +6,20 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "FuncionesMultiservo.c" 2
-# 1 "./FuncionesMultiservo.h" 1
+# 1 "../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c" 2
+# 1 "../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.h" 1
 
 
 
+void Uart_Init(unsigned long baud);
+short Uart_Available(void);
+void Uart_Send_Char(char txData);
+void Uart_Send_String(char *info);
+char Uart_Read(void);
+void Uart_Read_String(char* Buf, unsigned int s_buf);
+void Uart_Read_Substring(char* cp, char* vc, int inc, int fn);
+void Uart_Read_StringUntil(char stop_c, char* buf, unsigned int st_size);
+# 1 "../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c" 2
 
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
@@ -5722,265 +5731,87 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 5 "./FuncionesMultiservo.h" 2
+# 2 "../../lenguaje_C/ProyectoRobot_PIC18F4550/practicas_USART.X/uart.c" 2
 
 
+void Uart_Init(unsigned long baud)
+{
+    TRISCbits.RC6 = 0;
+    TRISCbits.RC7 = 1;
+    TXSTA = 0x24;
+    RCSTA = 0x90;
+    BAUDCON = 0x00;
+    BAUDCONbits.BRG16 = 1;
+    unsigned int vx = (20000000/(baud*4))-1;
+    SPBRG = vx & 0x00FF;
+    SPBRGH = vx >> 8;
+}
 
+short Uart_Available(void)
+{
+    return PIR1bits.RCIF ? 1 : 0;
+}
 
+void Uart_Send_Char(char txData)
+{
+    while(TXSTAbits.TRMT == 0);
+    TXREG = txData;
+}
 
-static char bandera_servo[8];
-static char servo_1;
-static char servo_2;
-static char servo_3;
-static char servo_4;
-static char servo_5;
-static char servo_6;
-static char servo_7;
-static char servo_8;
-
-static char pos_servo1 = 0;
-static char pos_servo2 = 0;
-static char pos_servo3 = 0;
-static char pos_servo4 = 0;
-
-static void borraPosiciones();
-static void posicionInicial();
-static void grados();
-static void posicion0();
-
-
-
-static void servo1(char num_1, int vel_1);
-static void servo2(char num_2, int vel_2);
-static void servo3(char num_3, int vel_3);
-static void servo4(char num_4, int vel_4);
-static void servos(char num_1, char num_2, char num_3, char num_4, int vel_);
-static void servo12(char num_11, char num_12, int vel_12);
-
-static void andar();
-# 1 "FuncionesMultiservo.c" 2
-
-
-
-
-
-static void servo1(char num_1, int vel_1){
-    bandera_servo[1] = 1;
-    servo_1 = num_1;
-    while(vel_1 > 0){
-        vel_1--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
+void Uart_Send_String(char *info)
+{
+    while(*info)
+    {
+        Uart_Send_Char(*info++);
     }
-    bandera_servo[1] = 0;
 }
 
-static void servo2(char num_2, int vel_2){
-    bandera_servo[2] = 1;
-    servo_2 = num_2;
-    while(vel_2 > 0){
-        vel_2--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
+char Uart_Read(void)
+{
+    while(PIR1bits.RCIF == 0);
+    if(RCSTAbits.OERR == 1)
+    {
+        RCSTAbits.CREN = 0;
+        RCSTAbits.CREN = 1;
     }
-    bandera_servo[2] = 0;
+    PIR1bits.RCIF = 0;
+    return RCREG;
 }
 
-static void servo3(char num_3, int vel_3){
-    bandera_servo[3] = 1;
-    servo_3 = num_3;
-    while(vel_3 > 0){
-        vel_3--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
+void Uart_Read_String(char* Buf, unsigned int s_buf)
+{
+    unsigned int cont_buf = 0;
+    char c;
+    do
+    {
+        c = Uart_Read();
+        Buf[cont_buf++] = c;
+        if(cont_buf >= s_buf) break;
+    }while(c != '\n');
+    Buf[cont_buf-2] = '\0';
+    cont_buf = 0;
+}
+
+void Uart_Read_Substring(char* cp, char* vc, int inc, int fn)
+{
+    int pt = 0;
+    for(int lt=inc; lt<=fn; lt++)
+    {
+        vc[pt] = cp[lt];
+        pt++;
     }
-    bandera_servo[3] = 0;
+    vc[pt] = '\0';
+    pt = 0;
 }
 
-static void servo4(char num_4, int vel_4){
-    bandera_servo[4] = 1;
-    servo_4 = num_4;
-    while(vel_4 > 0){
-        vel_4--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
+void Uart_Read_StringUntil(char stop_c, char* buf, unsigned int st_size)
+{
+    unsigned int rx_cont = 0;
+    while(*(buf-1) != stop_c)
+    {
+        rx_cont++;
+        *buf++ = Uart_Read();
+        if(rx_cont >= st_size) break;
     }
-    bandera_servo[4] = 0;
-}
-
-static void servos(char num_1, char num_2, char num_3, char num_4, int vel_){
-    bandera_servo[1] = 1;
-    bandera_servo[2] = 1;
-    bandera_servo[3] = 1;
-    bandera_servo[4] = 1;
-    servo_1 = num_1;
-    servo_2 = num_2;
-    servo_3 = num_3;
-    servo_4 = num_4;
-
-    while(vel_ > 0){
-        vel_--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-    }
-    bandera_servo[1] = 0;
-    bandera_servo[2] = 0;
-    bandera_servo[3] = 0;
-    bandera_servo[4] = 0;
-}
-
-static void servo12(char num_11, char num_12, int vel_12){
-    bandera_servo[1] = 1;
-    bandera_servo[2] = 1;
-    servo_1 = num_11;
-    servo_2 = num_12;
-    while(vel_12 > 0){
-        vel_12--;
-        _delay((unsigned long)((990)*(20000000UL/4000000.0)));
-    }
-    bandera_servo[1] = 0;
-    bandera_servo[2] = 0;
-}
-
-
-static void borraPosiciones(){
-    pos_servo1 = 0;
-    pos_servo2 = 0;
-    pos_servo3 = 0;
-    pos_servo4 = 0;
-}
-
-static void posicionInicial(){
-    servos(36, 36, 36, 36, 500);
-}
-
-static void grados() {
-    servo1(0, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(1, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(2, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(3, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(4, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(5, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(6, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(7, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(8, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(9, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(10, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servo1(11, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(12, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(13, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(14, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(15, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(16, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(17, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(18, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(19, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(20, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servo1(21, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(22, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(23, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(24, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(25, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(26, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(27, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(28, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(29, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(30, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servo1(31, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(32, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(33, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(34, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(35, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(36, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(37, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(38, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(39, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(40, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servo1(41, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(42, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(43, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(44, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(45, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(46, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(47, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(48, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(49, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-    servo1(50, 200);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-}
-
-static void posicion0(){
-    servo1(0, 300);
-    servo2(0, 300);
-    servo3(0, 300);
-    servo4(0, 300);
-}
-
-
-
-
-static void andar(){
-
-    servos(30, 45, 45, 30, 100);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servos(37, 45, 45, 37, 100);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servos(44, 30, 30, 44, 100);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-    servos(37, 30, 30, 37, 100);
-    _delay((unsigned long)((200)*(20000000UL/4000.0)));
-
-
+    *--buf = 0;
 }
